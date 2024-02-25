@@ -5,13 +5,14 @@
 - Python in Console
 - 01. Python in VS Code
 - Modules and pip in Python
+- Python Inner Workings
 
 
 
 # What is Python
 
     - Python is a dynamically typed, general purpose programming language that supports an object-oriented programming approach as well as a functional programming approach.
-    - Python is an interpreted and a high-level platform-independent open-source programming language.
+    - Python is an interpreted and a platform-independent open-source high-level programming language.
     - It is possible to integrate other programming languages within python.
 
 
@@ -48,4 +49,42 @@
 
 
 
-#
+# Python Inner Workings
+
+- Bytecode Generation:
+
+    -- When you write Python code, it's initially in plain text form.
+    -- Python compiles this source code into bytecode, which is a low-level representation of the code that the Python interpreter can understand and execute.
+    -- Bytecode is platform-independent and stored in .pyc files (compiled Python files) or in memory if not saved to disk.
+
+- Compilation vs. Interpretation:
+
+    -- Python is often described as an interpreted language, but it actually goes through both compilation and interpretation.
+    -- Compilation: Python source code is compiled into bytecode (.pyc) files by the Python interpreter when the module is first imported or executed.
+    -- Interpretation: The bytecode is then executed by the Python interpreter.
+
+- "__pycache__" Directory:
+
+    -- When Python compiles source files into bytecode, it stores the resulting .pyc files in a special directory called __pycache__.
+    -- This directory helps in caching compiled bytecode files, improving the performance of subsequent imports of the same modules.
+    -- It's located alongside the Python source files and is typically automatically managed by Python.
+
+- Bytecode Interpretation:
+
+    -- Python bytecode is executed by the Python interpreter, which is implemented in C.
+    -- The interpreter reads and executes each bytecode instruction one by one.
+    -- During execution, the interpreter interacts with the Python runtime environment, which includes objects, modules, memory management, etc.
+
+- Optimizations and Caching:
+
+    -- Python implementations like CPython (the reference implementation) perform various optimizations to improve performance.
+    -- These optimizations include bytecode caching (storing bytecode in memory or on disk), just-in-time (JIT) compilation, and other runtime optimizations.
+
+- Execution Environment:
+
+    -- Python code runs within a Python runtime environment, which provides access to standard libraries, modules, and other resources.
+    -- The runtime environment manages memory, objects, exceptions, and other runtime aspects of Python execution.
+
+
+
+# 
